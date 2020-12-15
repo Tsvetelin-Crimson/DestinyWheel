@@ -1,1 +1,7 @@
-export default powers = [ "Rocket Launcher", "Linear Fusion Rifle", "Grenade Launcher"]
+export default [ 
+    "Linear Fusion Rifle", 
+    "Rocket Launcher", 
+    "Sword", 
+    "Grenade Launcher",
+    "Machine Gun",
+]

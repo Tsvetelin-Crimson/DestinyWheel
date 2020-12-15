@@ -1,50 +1,106 @@
-import hunterExotics from "./data/exotics/hunter.js"
-import warlockExotics from "./data/exotics/warlock.js"
+import { getExoticWeapon, getKinetic, getEnergy, getPower } from "./services/weaponService.js"
+import { getClass, getExoticArmor, getSubclass, checkCheckboxes } from "./services/classRollService.js"
+import { getDissadvantage } from "./services/disadvantagesService.js"
 
+document.getElementById('rollButton').addEventListener('click', roll);
+const resultList = document.querySelector('#results > ul');
+function roll(e) {
+    e.preventDefault();
+    if (!checkCheckboxes()) {
+        let exoticArmor = getExoticArmor()
+        let currClass = getClass(exoticArmor)
 
-const rollButton = document.getElementById('rollButton');
-const anyCheckbox = document.getElementById('anyCheckbox');
-const hunterCheckbox = document.getElementById('hunterCheckbox');
-const warlockCheckbox = document.getElementById('warlockCheckbox');
-const titanCheckbox = document.getElementById('titanCheckbox');
+        let exoticWeapon = getExoticWeapon();
 
-rollButton.addEventListener('click', roll)
+        let kinetic = getKinetic();
+        let energy = getEnergy();
+        let power = getPower();
 
-function roll(e){
-    // e.preventDefault();  // if need be re-add
-    console.log(hunterExotics);
-    let allowedExoticArmors = []
-    if (anyCheckbox.checked) {
-        console.log("in if for anycheck");
+        let subClass = getSubclass();
 
+        let disadvantage = getDissadvantage()
 
-        
-    } else {
-        if (hunterCheckbox.checked) {
-            console.log("in if for hunter");
-            allowedExoticArmors.push(...hunterExotics);
-        }
-
-        if (warlockCheckbox.checked) {
-            console.log("in if for warlock");
-            allowedExoticArmors.push(...warlockExotics);
-            
-        }
-
-        if (titanCheckbox.checked) {
-            console.log("in if for titan");
-             
-        }
-
-        let indexForArmor = getRndInteger(0, allowedExoticArmors.length);
-        console.log(allowedExoticArmors[indexForArmor]);
-        return;
+        ChangeResultDiv(currClass, exoticArmor, exoticWeapon, kinetic, energy, power, subClass, disadvantage);
     }
 }
 
 
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min) ) + min;
+function changeClassDiv(currClass){
+    resultList.children[0].textContent = currClass;
 }
 
-// HELLO
+function changeExoticArmorDiv(exoticArmor){
+    resultList.children[2].textContent = exoticArmor;
+}
+
+function changeExoticWeaponDiv(exoticWeapon){
+    resultList.children[4].textContent = exoticWeapon;
+}
+
+function changeKineticDiv(kinetic){
+    resultList.children[6].textContent = kinetic;
+}
+
+function changeEnergyDiv(energy){
+    resultList.children[8].textContent = energy;
+}
+
+function changePowerDiv(power){
+    resultList.children[10].textContent = power;
+}
+
+function changeSubClassDiv(subClass){
+    resultList.children[12].textContent = subClass;
+}
+
+function changeDisadvantageDiv(disadvantage){
+    resultList.children[14].textContent = disadvantage.title;
+    resultList.children[16].textContent = disadvantage.explanation;
+}
+
+function ChangeResultDiv(currClass, exoticArmor, exoticWeapon, kinetic, energy, power, subClass, disadvantage) {
+    changeClassDiv(currClass);
+    changeExoticArmorDiv(exoticArmor);
+    changeExoticWeaponDiv(exoticWeapon);
+    changeKineticDiv(kinetic);
+    changeEnergyDiv(energy);   
+    changePowerDiv(power);
+    changeSubClassDiv(subClass);
+    changeDisadvantageDiv(disadvantage);
+}
+
+document.getElementById('armorExoticReRoll').addEventListener('click', () => {
+    let exoticArmor = getExoticArmor(true);
+    if (exoticArmor != "") {
+     changeExoticArmorDiv(exoticArmor);
+    }
+});
+
+document.getElementById('exoticWeaponReRoll').addEventListener('click', () => {
+    let exoticWeapon = getExoticWeapon();
+    changeExoticWeaponDiv(exoticWeapon);
+});
+
+document.getElementById('kineticReRoll').addEventListener('click', () => {
+    let kinetic = getKinetic();
+    changeKineticDiv(kinetic);
+});
+
+document.getElementById('energyReRoll').addEventListener('click', () => {
+    let energy = getEnergy();
+    changeEnergyDiv(energy);
+});
+
+document.getElementById('powerReRoll').addEventListener('click', () => {
+    let power = getPower();
+    changePowerDiv(power);
+});
+
+document.getElementById('superReRoll').addEventListener('click', () => {
+    let subclass = getSubclass();
+    changeSubClassDiv(subclass);
+});;
+document.getElementById('disadvantageReRoll').addEventListener('click', () => {
+    let disadvantage = getDissadvantage(true);
+    changeDisadvantageDiv(disadvantage);
+});

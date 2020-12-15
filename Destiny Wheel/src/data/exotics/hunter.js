@@ -1,1 +1,0 @@
-export default [ "Kephri's sting", "Celestial Nighthawk", "Oathkeeper", "Stompees", "Frostees" ]
