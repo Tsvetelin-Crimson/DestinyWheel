@@ -1,0 +1,1 @@
+export default kinetics = [ "Sidearm", "Auto Rifle", "Pulse Rifle"]
