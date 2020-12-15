@@ -8,7 +8,7 @@
     <body>
         <main>
             <h1>Randomize your loadout</h1>
-            <form>
+            <form action="index.html" method="POST">
                 <p>Choose your class:</p>
                 <label>Any</label>
                 <input id="anyCheckbox" type="checkbox" name="class" value="Any"><br>
@@ -18,7 +18,9 @@
                 <input id="warlockCheckbox" type="checkbox" name="class" value="Warlock"><br>
                 <label>Titan</label>
                 <input id="titanCheckbox" type="checkbox" name="class" value="Titan"><br>
-                <input type="button" id="rollButton" value="Roll">
+                <p>Disadvantage?</p>
+                <input id="disadvantage" type="checkbox"
+                <input type="Submit" id="rollButton" value="Roll">
             </form>
         <main>
     </body>
