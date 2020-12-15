@@ -16,6 +16,5 @@ export function getDissadvantage(reroll = false) {
         disadvantage = rollItems(disadvantages);
     }
     
-
     return disadvantage;
 }
