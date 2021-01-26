@@ -1,9 +1,10 @@
 import { getExoticWeapon, getKinetic, getEnergy, getPower } from "./services/weaponService.js"
 import { getClass, getExoticArmor, getSubclass, checkCheckboxes } from "./services/classRollService.js"
 import { getDissadvantage } from "./services/disadvantagesService.js"
+import { changeClassDiv, changeDisadvantageDiv, changeEnergyDiv, changeExoticArmorDiv, changeExoticWeaponDiv, changeKineticDiv, changePowerDiv, changeSubClassDiv } from "./services/divChangerService.js"
 
 document.getElementById('rollButton').addEventListener('click', roll);
-const resultList = document.querySelector('#results > ul');
+
 function roll(e) {
     e.preventDefault();
     if (!checkCheckboxes()) {
@@ -22,40 +23,6 @@ function roll(e) {
 
         ChangeResultDiv(currClass, exoticArmor, exoticWeapon, kinetic, energy, power, subClass, disadvantage);
     }
-}
-
-
-function changeClassDiv(currClass){
-    resultList.children[0].textContent = currClass;
-}
-
-function changeExoticArmorDiv(exoticArmor){
-    resultList.children[2].textContent = exoticArmor;
-}
-
-function changeExoticWeaponDiv(exoticWeapon){
-    resultList.children[4].textContent = exoticWeapon;
-}
-
-function changeKineticDiv(kinetic){
-    resultList.children[6].textContent = kinetic;
-}
-
-function changeEnergyDiv(energy){
-    resultList.children[8].textContent = energy;
-}
-
-function changePowerDiv(power){
-    resultList.children[10].textContent = power;
-}
-
-function changeSubClassDiv(subClass){
-    resultList.children[12].textContent = subClass;
-}
-
-function changeDisadvantageDiv(disadvantage){
-    resultList.children[14].textContent = disadvantage.title;
-    resultList.children[16].textContent = disadvantage.explanation;
 }
 
 function ChangeResultDiv(currClass, exoticArmor, exoticWeapon, kinetic, energy, power, subClass, disadvantage) {
