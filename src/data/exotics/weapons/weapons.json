@@ -1,4 +1,4 @@
-export default [
+[
     "Sweet Business",
     "Strum",
     "Vigilance Wing",
@@ -74,4 +74,11 @@ export default [
     "No Time To Explain",
     "Salvation's Grip",
     "The Lament",
+    "Duality",
+    "Dead Man's Tale",
+    "Ticuu's Divination",
+    "Cryosthesia 77k",
+    "Vex Mythoclast",
+    "Lorentz Driver",
+    "Ager's Scepter"
 ]

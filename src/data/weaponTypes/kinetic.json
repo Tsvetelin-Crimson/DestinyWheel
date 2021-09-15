@@ -1,4 +1,4 @@
-export default [ 
+[ 
     "Scout Rifle", 
     "Pulse Rifle", 
     "Auto Rifle", 
@@ -8,6 +8,5 @@ export default [
     "Bow",
     "Shotguns",
     "Sniper Rifle",
-    "Grenade Launcher",
-    "Fusion Rifle"
+    "Grenade Launcher"
 ]

@@ -1,4 +1,4 @@
-export default [ 
+[ 
     "Aeon Swift" ,
     "Assassin's Cowl",
     "The Bombardiers",
@@ -28,5 +28,5 @@ export default [
     "Wormhusk Crown",
     "Young Ahamkara's Spine",
     "Athrys's Embrace",
-    "Mask of Bakris",
+    "Mask of Bakris"
     ]

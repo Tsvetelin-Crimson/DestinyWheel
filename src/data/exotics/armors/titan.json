@@ -1,4 +1,4 @@
-export default [ 
+[ 
     "ACD/0 Feedback Fence" ,
     "Actium War Rig",
     "Aeon Safe",
@@ -27,5 +27,5 @@ export default [
     "Stronghold",
     "Synthoceps",
     "Ursa Furiosa",
-    "Wormgod Caress",
-    ]
+    "Wormgod Caress"
+]

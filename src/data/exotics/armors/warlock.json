@@ -1,4 +1,4 @@
-export default [ 
+[ 
     "Aeon Soul" ,
     "Apotheosis Veil",
     "Chromatic Fire",
@@ -26,5 +26,5 @@ export default [
     "Verity's Brow",
     "Vesper of Radius",
     "Wings of Sacred Dawn",
-    "Winter's Guile",
-    ]
+    "Winter's Guile"
+]

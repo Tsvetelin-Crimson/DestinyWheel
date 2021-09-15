@@ -1,22 +1,22 @@
-import rollItems from "../services/rollService.js"
-import exoticWeapons from "../data/exotics/weapons/exoticWeapons.js"
-import kinetics from "../data/weaponTypes/kineticTypes.js"
-import energies from "../data/weaponTypes/energyTypes.js"
-import powers from "../data/weaponTypes/PowerTypes.js"
+import rollItems from "../services/rollService.js";
+import { fetchJson } from "../services/helperFunctions.js";
 
-
-export function getExoticWeapon(){
+export async function getExoticWeapon(){
+    let exoticWeapons = await fetchJson("/src/data/exotics/weapons/weapons.json");
     return rollItems(exoticWeapons);
 }
 
-export function getKinetic(){
+export async function getKinetic(){
+    let kinetics = await fetchJson("/src/data/weaponTypes/kinetic.json");
     return rollItems(kinetics);
 }
 
-export function getEnergy(){
+export async function getEnergy(){
+    let energies = await fetchJson("/src/data/weaponTypes/energy.json");
     return rollItems(energies);
 }
 
-export function getPower(){
+export async function getPower(){
+    let powers = await fetchJson("/src/data/weaponTypes/power.json");
     return rollItems(powers);
 }

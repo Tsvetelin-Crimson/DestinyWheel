@@ -1,7 +1,7 @@
-export default [ 
-    "Scout Rifle", 
-    "Pulse Rifle", 
-    "Auto Rifle", 
+[
+    "Scout Rifle",
+    "Pulse Rifle",
+    "Auto Rifle",
     "Hand Cannon",
     "Sidearm",
     "SMG",
@@ -9,4 +9,5 @@ export default [
     "Shotguns",
     "Sniper Rifle",
     "Grenade Launcher",
+    "Fusion Rifle"
 ]
