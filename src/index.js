@@ -5,6 +5,8 @@ import { changeClassDiv, changeDisadvantageDiv, changeEnergyDiv, changeExoticArm
 
 document.getElementById('rollButton').addEventListener('click', roll);
 
+const errorDiv = document.getElementById("rollErrorDiv");
+
 async function roll(e) {
     e.preventDefault();
     if (!checkCheckboxes()) {
@@ -22,6 +24,14 @@ async function roll(e) {
         let disadvantage = await getDissadvantage()
 
         ChangeResultDiv(currClass, exoticArmor, exoticWeapon, kinetic, energy, power, subClass, disadvantage);
+    } else {
+        const errorMessage = "You must pick at least one class to be able to roll";
+        errorDiv.textContent = errorMessage;
+        errorDiv.hidden = false;
+        setTimeout(() => {
+            errorDiv.hidden = true;
+            errorDiv.textContent = "";
+        }, 5000);
     }
 }
 

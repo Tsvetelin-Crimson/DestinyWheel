@@ -72,3 +72,8 @@ hr {
     margin-top: 10px;
     width: 17vw;
 }
+
+#rollErrorDiv{
+    color: red;
+    margin-bottom: 1vw;
+}
