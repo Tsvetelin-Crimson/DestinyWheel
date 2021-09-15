@@ -28,6 +28,7 @@ async function roll(e) {
         const errorMessage = "You must pick at least one class to be able to roll";
         errorDiv.textContent = errorMessage;
         errorDiv.hidden = false;
+        
         setTimeout(() => {
             errorDiv.hidden = true;
             errorDiv.textContent = "";
