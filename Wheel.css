@@ -1,7 +1,8 @@
 * {
-    font-family: Verdana;
+    font-family: 'Roboto', sans-serif;
     background-color: black;
     color: white;
+    font-size: 1vw;
 }
 
 #main {
@@ -16,61 +17,47 @@ ul {
     list-style-type: none;
 }
 
-#results {
-    width: 17vw;
-    height: 15vh;
-    margin-top: 29.5vh;
-    letter-spacing: 1px;
+li {
+    height: 3vh;
 }
 
-hr {
-    width: 500px;
+.checkbox {
+    width: 1.5vw;
+    height: 1.5vh;
+}
+
+#function {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+}
+
+#question {
+    width: 20vw;
+}
+
+#results {
+    width: 20vw;
 }
 
 #result1 {
-    width: 17vw;
-    margin-bottom: 28px;
+    width: 20vw;
+    margin-bottom: 1vw;
 }
 
 #result2 {
-    margin-top: 10px;
-    width: 17vw;
-    margin-bottom: 28px;
+    margin-top: 1vw;
+    width: 20vw;
+    margin-bottom: 1vw;
 }
 
 #result3 {
-    margin-top: 11px;
-    margin-bottom: 29px;
-    width: 17vw;
+    margin-top: 1vw;
+    width: 20vw;
 }
 
-#result4 {
-    margin-bottom: 25px;
-    margin-top: 9px;
-    width: 17vw;
-}
-
-#result5 {
-    margin-bottom: 27px;
-    margin-top: 13px;
-    width: 17vw;
-}
-
-#result6 {
-    margin-bottom: 28px;
-    margin-top: 12px;
-    width: 17vw;
-}
-
-#result7 {
-    margin-bottom: 27px;
-    margin-top: 10px;
-    width: 17vw;
-}
-
-#result8 {
-    margin-top: 10px;
-    width: 17vw;
+#rollButton{
+    margin-top: 1vh;
 }
 
 #rollErrorDiv{
