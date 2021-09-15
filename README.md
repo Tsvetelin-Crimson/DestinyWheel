@@ -7,6 +7,7 @@ I will add a description of the funtionallity of the site in case it is not easy
 1. Pick whichever classes you want to be allowed to roll by clicking the checkmarks*. Note that "Any" overrides any other checkmarks other than the optional one.
 2. Click the "Roll" button
 3. See what you get in the list of results
+
 Optionally tick the disadvantages checkmark to get a random disadvantage with its description
 
 
